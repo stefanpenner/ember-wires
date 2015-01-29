@@ -6,12 +6,8 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    create() {
-      var model = this.modelFor('colors.create');
-
-      model.save().then(() => {
-        this.transitionTo('colors.show', model);
-      });
+    colorWasCreated(color) {
+      this.transitionTo('colors.show', color);
     }
   }
 });
