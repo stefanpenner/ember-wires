@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>Colors: Create</h1>
+</div>
+
+<div class="colors__form form-horizontal well" role="form">
+  <div class="form-group">
+    <label class="col-sm-1 control-label" for="name">Name</label>
+    <div class="col-sm-11">
+      {{input name="name" value=name classNames="form-control" placeholder="blue"}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-1 control-label" for="hex">Hex</label>
+    <div class="col-sm-11">
+      {{input name="name" value=hex classNames="form-control" placeholder="#00f"}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-1 col-sm-11">
+      <button class="btn btn-default" {{action "create" this}}>Submit</button>
+    </div>
+   </div>
+</div>

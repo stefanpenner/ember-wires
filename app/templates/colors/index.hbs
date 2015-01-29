@@ -1,0 +1,17 @@
+<div class="colors colors--index container">
+  <div class="page-header">
+    {{#link-to "colors.create" classNames="btn btn-primary pull-right"}}Create{{/link-to}}
+    <h1>Colors: Index</h1>
+  </div>
+
+  <div class="colors__list">
+    <div class="list-group">
+      {{#each color in model}}
+        {{#link-to "colors.show" color classNames="colors__item list-group-item"}}
+          <h4 class="list-group-item-heading">{{color.name}}</h4>
+          <p class="list-group-item-text">{{color.hex}}</p>
+        {{/link-to}}
+      {{/each}}
+    </div>
+  </div>
+</div>
